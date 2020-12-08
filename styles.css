@@ -1,0 +1,167 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+blockquote {
+  font-size: 2em;
+  font-family: "Caveat", cursive;
+  text-align: center;
+  padding: 10px 5px;
+  background-color: teal;
+  color: seashell;
+}
+blockquote::before,
+blockquote::after {
+  content: '"';
+}
+.main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.main-inner {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, auto, auto, 0);
+}
+.main_title {
+  font-family: "Poiret One", cursive;
+  display: -webkit-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 1em;
+  width: 100%;
+  height: 100%;
+  color: seashell;
+  font-size: 3em;
+  text-align: center;
+  transition: all 2s;
+  animation: fade 1s ease-in forwards;
+}
+figure {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.main:nth-child(3) figure {
+  background-image: url("mainmob.jpg");
+}
+.main:nth-child(4) figure {
+  background-image: url("four.jpg");
+}
+.main:nth-child(5) figure {
+  background-image: url("second.jpg");
+}
+.main:nth-child(6) figure {
+  background-image: url("thirdmob.jpg");
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* NavBar */
+.menu-btn {
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn-burger {
+  width: 50px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: seashell;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: seashell;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn-burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn-burger::after {
+  transform: translateY(16px);
+}
+.menu-btn.open .menu-btn-burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  background-color: teal;
+}
+.menu-btn.open .menu-btn-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background-color: teal;
+}
+.menu-btn.open:hover {
+  transform: rotate(180deg);
+}
+.nav-container {
+  z-index: 1;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: seashell;
+  clip-path: circle(0% at 0% 0%);
+  transition: clip-path 0.5s ease-in-out;
+}
+.nav-container a {
+  text-decoration: none;
+}
+.nav-container li {
+  list-style: none;
+  font-size: 2em;
+  color: teal;
+  padding: 10px;
+}
+.nav-container ul:nth-child(1) {
+  margin-top: 70px;
+}
+
+.show-menu {
+  clip-path: circle(45% at 0% 20%);
+}
+
+/* Destop screens */
+@media screen and (min-width: 768px) {
+}
