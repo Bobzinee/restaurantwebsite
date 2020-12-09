@@ -4,7 +4,7 @@ const quotes = ["Nothing brings people together like good food",
 "Hard work should be rewarded by good food", 
 "Good food is the foundation of genuine happiness",
 "Count the memories, not the calories", 
-"There is no sincere love than the love of food", 
+"There is no sincere love than the love for food", 
 "..because I don't want to look back & think \"I could have eaten that!\"", 
 "I followed my heart and it led me to the fridge", 
 "An apron is just a cape on backwards"];

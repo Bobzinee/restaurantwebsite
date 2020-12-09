@@ -7,6 +7,9 @@
 body::-webkit-scrollbar {
   display: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 blockquote {
   font-size: 2em;
   font-family: "Caveat", cursive;
@@ -63,16 +66,16 @@ figure {
   background-size: cover;
 }
 .main:nth-child(3) figure {
-  background-image: url("mainmob.jpg");
+  background-image: url("https://raw.githubusercontent.com/Bobzinee/restaurantwebsite/main/mainmob.jpg");
 }
 .main:nth-child(4) figure {
-  background-image: url("four.jpg");
+  background-image: url("https://raw.githubusercontent.com/Bobzinee/restaurantwebsite/main/four.jpg");
 }
 .main:nth-child(5) figure {
-  background-image: url("second.jpg");
+  background-image: url("https://raw.githubusercontent.com/Bobzinee/restaurantwebsite/main/second.jpg");
 }
 .main:nth-child(6) figure {
-  background-image: url("thirdmob.jpg");
+  background-image: url("https://raw.githubusercontent.com/Bobzinee/restaurantwebsite/main/thirdmob.jpg");
 }
 @keyframes fade {
   from {
@@ -100,6 +103,7 @@ figure {
   border-radius: 5px;
   background-color: seashell;
   transition: all 0.5s ease-in-out;
+  border: none;
 }
 .menu-btn-burger::before,
 .menu-btn-burger::after {
@@ -157,11 +161,107 @@ figure {
 .nav-container ul:nth-child(1) {
   margin-top: 70px;
 }
-
 .show-menu {
   clip-path: circle(45% at 0% 20%);
+}
+.cuisines {
+  position: relative;
+  color: white;
+}
+#services h2 {
+  color: teal;
+  text-align: center;
+  margin: 8px 0px;
+}
+.cuisines h4 {
+  font-family: "Poiret One", cursive;
+  font-size: 1.8em;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ser-container img {
+  width: 100%;
+  height: 15vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.rooms {
+  width: 100vw;
+  height: 280px;
+  margin: 5px 0;
+  border-radius: 1em;
+}
+.rooms img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#contact h2 {
+  color: teal;
+  font-family: "Poiret One", cursive;
+  text-align: center;
+  font-size: 1.7em;
+  padding: 5px;
+}
+.contact-container h3 {
+  text-decoration: underline;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(65, 65, 65);
+}
+.contact-container p {
+  font-size: 1.4em;
+}
+.details {
+  margin-left: 8px;
+  padding-top: 5px;
+}
+.contact-container img {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 400px;
+  overflow-x: hidden;
 }
 
 /* Destop screens */
 @media screen and (min-width: 768px) {
+  .contact-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .details {
+    margin-left: 3em;
+  }
+  #contact h2 {
+    font-size: 3em;
+    text-align: center;
+    color: teal;
+    font-family: "Poiret One", cursive;
+    padding: 8px;
+  }
+  #services h2 {
+    font-size: 3em;
+    text-align: center;
+    color: teal;
+    font-family: "Poiret One", cursive;
+    padding: 8px;
+  }
+  .ser-container img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .rooms {
+    width: 100vw;
+    height: 100vh;
+    margin: 5px 0;
+    border-radius: 1em;
+  }
 }
